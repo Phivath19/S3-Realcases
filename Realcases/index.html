@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Sono", sans-serif;
+      }
+      .pricing-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        
+      }
+      .pricing-plan-1, .pricing-plan-2, .pricing-plan-3{
+        
+        border-radius: 10px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+      }
+      .plan-price-1{
+        
+        color: #0099ff;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.5em;
+        padding: 20px 20px 0px 20px;
+      }
+      .plan-price-2{
+        color: rgb(29, 29, 235);
+        font-size: 1.5em;
+          font-weight: bold;
+          text-align: center;
+          padding: 20px 20px 0px 10px;
+        
+      }
+      .plan-price-3{
+        color: #ff00c3;
+        font-size: 1.5em;
+        font-weight: bold;
+        text-align: center;
+        padding: 20px 20px 0px 10px;
+      }
+      .plan-title-2{
+        border: none;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-image: linear-gradient(to left, #0a00fb, #002cf4, #003feb, #004de1, #2458d4, #2a5ad2, #2e5bd1, #335dcf, #2956d9, #224ee2, #2344e9, #2b37f0);
+        color: white;
+        font-size: 1.5em;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      .plan-title-1{
+        border: none;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-image: linear-gradient(to left, #007bf9, #008bfe, #0099ff, #00a7ff, #00b4ff, #00b8ff, #00bdff, #00c1ff, #00bfff, #00bdff, #00bbff, #00b9ff);
+        color: white;
+        font-size: 1.5em;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        
+      }
+      .plan-title-3{
+        border: none;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-image: linear-gradient(to right, #8a07fb, #9903fc, #a801fd, #b500fd, #c200fe, #cc00fc, #d600fb, #df00f9, #e800f4, #f000ef, #f800eb, #ff00e6);
+        color: white;
+        font-size: 1.5em;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        
+      }
+      .plan-features{
+        display: flex;
+        flex-direction: column;
+       padding: 20px;
+      }
+      .plan-features li{
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-top: 1px solid rgb(230, 230, 241);
+        text-decoration: none;
+        list-style: none;  
+      } 
+      #one, #two, #three{
+        border-bottom: 1px solid rgb(230, 230, 241);
+
+      } 
+      .plan-button-1{
+        padding: 15px 50px;
+        margin-bottom: 25%;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 50px;
+        color: white;
+        background-image: linear-gradient(to left, #007bf9, #008bfe, #0099ff, #00a7ff, #00b4ff, #00b8ff, #00bdff, #00c1ff, #00bfff, #00bdff, #00bbff, #00b9ff);
+        border: none;
+        font-weight: bold;
+      }
+
+      .plan-button-2{
+        padding: 15px 50px;
+        margin-bottom: 17%;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 50px;
+        border: none;
+        color: white;
+        font-weight: bold;
+        background-image: linear-gradient(to left, #0a00fb, #002cf4, #003feb, #004de1, #2458d4, #2a5ad2, #2e5bd1, #335dcf, #2956d9, #224ee2, #2344e9, #2b37f0);
+      }
+      .plan-button-3{
+        padding: 15px 50px;
+        margin-bottom: 22%;
+        border-radius: 50px;
+        border: none;
+        color: white;
+        font-weight: bold;
+        margin-left: 20px;
+        margin-right: 20px;
+        background-image: linear-gradient(to right, #8a07fb, #9903fc, #a801fd, #b500fd, #c200fe, #cc00fc, #d600fb, #df00f9, #e800f4, #f000ef, #f800eb, #ff00e6);
+      }
+      
+      /* Hint: What can you do with a media query and flexbox? */
+      @media (max-width: 768px) {
+        .pricing-container{
+          flex-direction: column;
+          align-items: center;
+        }
+        .pricing-plan-1, .pricing-plan-2, .pricing-plan-3{
+          width: 80%;
+          margin-bottom: 1em;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="pricing-container">
+      <div class="pricing-plan-1">
+        <div class="plan-title-1">Basic</div>
+        <div class="plan-price-1">$9.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 10GB Storage</li>
+          <li>✅ 1 User</li>
+          <li id="one">🚫 Support</li>
+        </ul>
+        <button class="plan-button-1">Sign Up</button>
+      </div>
+      <div class="pricing-plan-2">
+        <div class="plan-title-2">Standard</div>
+        <div class="plan-price-2">$19.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 50GB Storage</li>
+          <li>✅ 5 Users</li>
+          <li id="two">✅ Phone &amp; Email Support</li>
+        </ul>
+        <button class="plan-button-2">Sign Up</button>
+      </div>
+      <div class="pricing-plan-3">
+        <div class="plan-title-3">Premium</div>
+        <div class="plan-price-3">$49.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 100GB Storage</li>
+          <li>✅ 10 Users</li>
+          <li id="three">✅ 24/7 Support</li>
+        </ul>
+        <button class="plan-button-3">Sign Up</button>
+      </div>
+    </div>
+  </body>
+</html>
